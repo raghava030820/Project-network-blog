@@ -1,0 +1,75 @@
+:root {
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --accent-soft: rgba(99, 102, 241, 0.12);
+}
+
+:root[data-theme="dark"] {
+    --accent: #818cf8;
+    --accent-hover: #a5b4fc;
+    --accent-soft: rgba(129, 140, 248, 0.15);
+}
+
+.logo a {
+    background: linear-gradient(90deg, var(--accent), #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu a {
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--accent);
+}
+
+.menu .active {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+}
+
+.md-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    transition: color 0.2s ease;
+}
+
+.md-content a:hover {
+    color: var(--accent-hover);
+}
+
+.post-tags a {
+    background: var(--accent-soft);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.post-tags a:hover {
+    color: var(--accent);
+}
+
+.pagination a {
+    background: var(--accent);
+    transition: background 0.2s ease;
+}
+
+.pagination a:hover {
+    background: var(--accent-hover);
+}
+
+.paginav {
+    border: 1px solid var(--accent-soft);
+}
+
+.paginav a:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.footer a:hover,
+.social-icons a:hover {
+    color: var(--accent);
+}

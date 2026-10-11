@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+# ---------------------------------------------------------------------------
+# Sveltia CMS — visual editor for this blog.
+# Open it at:  https://raghava030820.github.io/Project-network-blog/admin/
+# Sign in with a GitHub personal access token (no OAuth server needed).
+# ---------------------------------------------------------------------------
+backend:
+  name: github
+  repo: raghava030820/Project-network-blog
+  branch: main
+
+site_url: https://raghava030820.github.io/Project-network-blog/
+display_url: Network Blog
+
+# Shared media (used when a collection has no entry-relative media folder).
+media_folder: static/images
+public_folder: /images
+
+commit_messages:
+  create: "Create {{collection}} “{{slug}}”"
+  update: "Update {{collection}} “{{slug}}”"
+  delete: "Delete {{collection}} “{{slug}}”"
+  uploadMedia: "Upload “{{path}}”"
+  deleteMedia: "Delete “{{path}}”"
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: content/posts
+    path: "{{slug}}/index"
+    media_folder: "images"
+    public_folder: "images"
+    create: true
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, type: date }
+      - { name: draft, label: Draft, widget: boolean, default: true }
+      - { name: categories, label: Categories, widget: list, required: false, default: [] }
+      - { name: tags, label: Tags, widget: list, required: false, default: [] }
+      - { name: summary, label: Summary, widget: text, required: false }
+      - name: cover
+        label: Cover image
+        widget: object
+        required: false
+        fields:
+          - { name: image, label: Image, widget: image, required: false }
+          - { name: alt, label: Alt text, widget: string, required: false }
+          - { name: caption, label: Caption, widget: string, required: false }
+      - { name: body, label: Body, widget: markdown }
