@@ -5,7 +5,10 @@ draft: true
 categories: []
 tags: []
 summary: lbelwhghwpg
-cover: null
+cover:
+  image: ''
+  alt: ''
+  caption: ''
 ---
 
 whpbp[wh[bw[
