@@ -1,6 +1,6 @@
 baseURL = 'https://raghava030820.github.io/Project-network-blog/'
 locale = 'en-us'
-title = 'Routing-table'
+title = 'Network Blog'
 theme = 'PaperMod'
 
 enableRobotsTXT = true
