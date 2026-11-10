@@ -1,0 +1,9 @@
+{{- $src := .Get "src" -}}
+{{- $type := .Get "type" | default "video/webm" -}}
+{{- with .Page.Resources.GetMatch $src -}}
+<video autoplay loop muted playsinline controls preload="metadata">
+  <source src="{{ .RelPermalink }}" type="{{ $type }}">
+</video>
+{{- else -}}
+<p><em>Video not found: {{ $src }}</em></p>
+{{- end -}}

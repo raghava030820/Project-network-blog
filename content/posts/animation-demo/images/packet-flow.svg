@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200"
+     role="img" aria-label="Packet flowing from client through router to server">
+  <style>
+    .box  { fill:#eef2ff; stroke:#6366f1; stroke-width:2 }
+    .lbl  { font:14px system-ui,sans-serif; fill:#1f2937; text-anchor:middle }
+    .link { stroke:#9ca3af; stroke-width:2 }
+    .pkt  { fill:#6366f1 }
+    @media (prefers-reduced-motion: reduce){ .pkt{display:none} }
+  </style>
+
+  <line class="link" x1="160" y1="100" x2="520" y2="100"/>
+
+  <rect class="box" x="40"  y="70" width="120" height="60" rx="8"/>
+  <text class="lbl" x="100" y="105">Client</text>
+  <rect class="box" x="250" y="70" width="120" height="60" rx="8"/>
+  <text class="lbl" x="310" y="105">Router</text>
+  <rect class="box" x="520" y="70" width="90"  height="60" rx="8"/>
+  <text class="lbl" x="565" y="105">Server</text>
+
+  <circle class="pkt" r="7">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M160 100 H520"/>
+  </circle>
+</svg>
