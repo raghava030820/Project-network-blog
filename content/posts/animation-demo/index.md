@@ -1,10 +1,14 @@
 ---
-title: "Animation Demo"
+title: Animation Demo
 date: 2026-11-10
-draft: true
-categories: ["Guides"]
-tags: ["animation", "svg"]
-summary: "Example post showing how to embed an animated packet-flow diagram (and video) in Hugo."
+draft: false
+categories:
+  - Guides
+tags:
+  - animation
+  - svg
+summary: Example post showing how to embed an animated packet-flow diagram (and video) in Hugo.
+cover: null
 ---
 
 This post demonstrates embedding motion in a Hugo post. Delete it once you've tried it.
